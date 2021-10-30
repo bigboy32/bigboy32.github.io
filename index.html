@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Bigboy32</title>
+
+    <script>
+        function disableScrolling(){
+            var x=window.scrollX;
+            var y=window.scrollY;
+            window.onscroll=function(){window.scrollTo(x, y);};
+        }
+        function enableScrolling(){
+            window.onscroll=function(){};
+        }
+
+    </script>
+</head>
+<body>
+    
+    <main class="scroll-container">
+        <section id="elem1">
+
+            <div class="centered">
+                <img src="https://avatars.githubusercontent.com/u/34939884?v=4" alt="Profile Picture" id="profile-pic">
+                <p id="profile-text">BigBoy32</p>
+            
+                <div class="typewriter">
+                    <h1 id="gitio">.github.io.</h1>
+                </div>
+            </div> 
+            
+        </section>
+        <section id="elem2" class="centerbox">
+            <h1>This site is under construction!</h1>
+        </section>
+    </main>
+    
+
+    <script>
+        const sections = [...document.querySelectorAll('section')]
+        let activeSection = 0;
+
+        document.getElementById("gitio").addEventListener("animationend", function () {
+            setTimeout(function() {
+                console.log("OK - VALID");
+                document.getElementById("elem2").scrollIntoView({ left: 0, block: 'start', behavior: 'smooth' });
+            }, 1000)
+        })
+    </script>
+    
+</body>
+</html>
